@@ -8,7 +8,6 @@ let backMovi = document.querySelector('.background-movimentacao')
 function activeCheck() {
     let activeElement = document.querySelector('.active');
     if (activeElement) {
-        homePage.classList.add("active")
         activeElement.classList.remove("active");
     }
 }
@@ -25,5 +24,5 @@ function movimentacao(){
 
 function login(){
     loginId.classList.remove("active")
-    homePage.classList.add("active")
+    homePage.classList.add("activeHome")
 }
