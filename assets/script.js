@@ -1,6 +1,6 @@
 let loginId = document.querySelector('#loginD')
 let homePage = document.querySelector('#homePage')
-let background = document.querySelector('.section-display')
+let background = document.querySelector('#background')
 let backProd = document.querySelector('.background-produtos')
 let backMovi = document.querySelector('.background-movimentacao')
 
@@ -25,4 +25,5 @@ function movimentacao(){
 function login(){
     loginId.classList.remove("active")
     homePage.classList.add("activeHome")
+    background.classList.add("active")
 }

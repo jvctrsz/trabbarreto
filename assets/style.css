@@ -207,10 +207,10 @@
     display: none;
 }
 
-.active{
-    display: block;
-}
 
 .activeHome{
+    display: block;
+}
+.active{
     display: block;
 }
