@@ -17,8 +17,8 @@
                         <img src="./assets/images/estoque-logo.png" alt="">
                     </div>
                     <div class="form-box">
-                        <input type="text" name="login" placeholder="Usuario:">
-                        <input type="text" name="password" placeholder="Senha:">
+                        <input type="text" id="login" name="login" placeholder="Usuario:">
+                        <input type="text" id="password" name="password" placeholder="Senha:">
                     </div>
                 </div>
             </div>
@@ -42,14 +42,14 @@
                     <p>CONTROLE <br>DE <br>ESTOQUE</p>
                 </div>
             </section>
-        
+
                 <div class="background-produtos">
                     <div class="title-produtos">
                         <li>PRODUTOS</li>
                     </div>
                     <div class="options-menu">
                         <nav class="edit-products">
-                            <button class="edit-btn">Incluir</button>
+                            <button class="edit-btn" onclick="incluirProd()">Incluir</button>
                             <button class="edit-btn">Alterar</button>
                             <button class="edit-btn">Excluir</button>
                         </nav>
@@ -57,6 +57,29 @@
                             <input type="text" placeholder="PESQUISA" name="search">
                         </nav>
                     </div>
+
+                    <section id="incluirProd" class="incluir-display ">
+                        <div class="incluir">
+                            <div class="incluir-produtos">
+                                <li>PRODUTOS</li>
+                            </div>
+                            <div class="inputs-incluir">
+                                <div class="input-box">
+                                    <label for="nome">NOME</label>
+                                    <input type="text" name="nome">
+                                </div>
+                                <div class="input-box">
+                                    <label for="type">TIPO</label>
+                                    <input type="text" name="type">
+                                </div>
+                            </div>
+                            <div class="incluir-options">
+                                <button id="fechar-prod" class="fechar -btn" onclick="fecharProd()">CANCELAR</button>
+                                <button id="enviar-prod" class="enviar -btn">ENVIAR</button>
+                            </div>
+                        </div>
+                    </section>
+
                     <div class="table">
                         <div class="title-line">
                             <div class="code">CÓDIGO</div>
@@ -85,13 +108,40 @@
                 </div>
                 <div class="options-menu">
                     <nav class="edit-products">
-                        <button class="edit-btn">Incluir</button>
+                        <button class="edit-btn" onclick="incluirMov()">Incluir</button>
                         <button class="edit-btn">Excluir</button>
                     </nav>
                     <nav class="search">
                         <input type="text" placeholder="PESQUISA" name="search">
                     </nav>
                 </div>
+
+                <section id="incluirMov" class="incluir-display ">
+                    <div class="incluir">
+                        <div class="incluir-produtos">
+                            <li>MOVIMENTAÇÃO</li>
+                        </div>
+                        <div class="inputs-incluir">
+                            <div class="input-box">
+                                <label for="nome">NOME</label>
+                                <input type="text" name="nome">
+                            </div>
+                            <div class="input-box">
+                                <label for="amount">QUANTIDADE</label>
+                                <input type="text" name="amount">
+                            </div>
+                            <div class="input-box">
+                                <label for="type">TIPO</label>
+                                <input type="text" name="type">
+                            </div>
+                        </div>
+                        <div class="incluir-options">
+                            <button id="fechar-mov" class="fechar -btn" onclick="fecharMov()">CANCELAR</button>
+                            <button id="enviar-mov" class="enviar -btn">ENVIAR</button>
+                        </div>
+                    </div>
+                </section>
+
                 <div class="table">
                     <div class="title-line">
                         <div class="code">CÓDIGO</div>
@@ -116,6 +166,7 @@
 
 
     <script src="./assets/script.js"></script>
+    <script src="./assets/incluir.js"></script>
 </body>
 
 </html>
