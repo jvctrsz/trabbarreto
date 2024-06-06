@@ -34,7 +34,6 @@ function login(){
 
 function incluirProd(){
     incluirprod.classList.add('incluirAct')
-
 }
 
 function incluirMov(){
