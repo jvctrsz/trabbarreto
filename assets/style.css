@@ -75,10 +75,12 @@
     margin: 40px;
     font-size: 25px;
     text-transform: uppercase;
+    list-style: none;
 }
 
 .lateral-bar > nav > ul > li{
     padding: 15px 0px;
+   
 }
 
 .lateral-bar > nav > ul > li:hover{
