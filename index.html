@@ -18,13 +18,13 @@
                     </div>
                     <div class="form-box">
                         <input type="text" id="loginUser" name="login" placeholder="Usuario:">
-                        <input type="password"  id="senhaUser" name="password" placeholder="Senha:">
+                        <input type="password" id="senhaUser" name="password" placeholder="Senha:">
                     </div>
                     <p id="loginMensage"></p>
                     <button class="login-btn" onclick="login()">LOGIN</button>
                 </div>
             </div>
-            
+
         </section>
     </section>
 
@@ -97,75 +97,67 @@
                     </div>
                 </div>
             </div>
-            
-                <div class="background-movimentacao">
-                    <div class="title-produtos">
-                        <span>MOVIMENTAÇÃO</span>
-                    </div>
-                    <div class="options-menu">
-                        <nav class="edit-products">
-                            <button class="edit-btn" onclick="incluirMov()">Incluir</button>
-                            <button class="edit-btn">Excluir</button>
-                        </nav>
-                        <nav class="search">
-                            <input type="text" placeholder="PESQUISA" name="search">
-                        </nav>
-                    </div>
 
-                    <section id="incluirMov" class="incluir-display">
-                        <div class="incluir">
-                            <div class="incluir-produtos">
-                                <span>MOVIMENTAÇÃO</span>
-                            </div>
-                            <form id="formMovi" class="inputs-incluir">
-                                <div class="input-box">
-                                    <label for="nome">NOME</label>
-                                    <input id="nomeMov" class="inputsProd" type="text" name="nome" required>
-                                </div>
-                                <div class="input-box">
-                                    <label for="amount">QUANTIDADE</label>
-                                    <input id="quantMov" class="inputsProd" type="text" name="type" required>
-                                </div>
-                                <div class="input-box">
-                                    <label for="type">TIPO</label>
-                                    <input id="tipoMov" class="inputsProd" type="text" name="type" required>
-                                </div>
-                            </form>
-                            <div class="incluir-options">
-                                <button id="fechar-mov" class="fechar -btn" onclick="fecharMov()">CANCELAR</button>
-                                <button id="enviar-mov" class="enviar -btn">ENVIAR</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <div class="table">
-                        <div class="title-line">
-                            <div class="code">CÓDIGO</div>
-                            <div class="code">COD.PRO</div>
-                            <div class="name">OBSERVAÇÃO</div>
-                            <div class="type">TIPO</div>
-                            <div class="amount">QUANT.</div>
-                            <div class="date">DATA</div>
-                            <button class="alterar-off"></button>
-                            <button class="deletar-off"></button>
-                        </div>
-                        <div id="tableMov" class="boxItens">
-                            <div>
-                                <div>
-                                    <div class="code">0</div>
-                                    <div class="code">0</div>
-                                    <div class="name">teclado</div>
-                                    <div class="type">entrada</div>
-                                    <div class="amount">5.</div>
-                                    <div class="date">07/11/2023</div>
-                                 <button class="deletar">Deletar</button>
-                                 <button class="alterar-off"></button>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="background-movimentacao">
+                <div class="title-produtos">
+                    <span>MOVIMENTAÇÃO</span>
                 </div>
+                <div class="options-menu">
+                    <nav class="edit-products">
+                        <button class="edit-btn" onclick="incluirMov()">Incluir</button>
+                        <button class="edit-btn">Excluir</button>
+                    </nav>
+                    <nav class="search">
+                        <input type="text" placeholder="PESQUISA" name="search">
+                    </nav>
+                </div>
+
+                <section id="incluirMov" class="incluir-display">
+                    <div class="incluir">
+                        <div class="incluir-produtos">
+                            <span>MOVIMENTAÇÃO</span>
+                        </div>
+                        <form id="formMovi" class="inputs-incluir">
+                            <div class="input-box">
+                                <label for="nome">COD.PRO</label>
+                                <input id="codMov" class="inputsMov" type="text" name="nome" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="nome">NOME</label>
+                                <input id="nomeMov" class="inputsMov" type="text" name="nome" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="type">TIPO</label>
+                                <input id="tipoMov" class="inputsMov" type="text" name="type" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="amount">QUANTIDADE</label>
+                                <input id="quantMov" class="inputsMov" type="text" name="type" required>
+                            </div>
+                        </form>
+                        <div class="incluir-options">
+                            <button id="fechar-mov" class="fechar -btn" onclick="fecharMov()">CANCELAR</button>
+                            <button id="enviar-mov" class="enviar -btn">ENVIAR</button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="table">
+                    <div class="title-line">
+                        <div class="code">CÓDIGO</div>
+                        <div class="code">COD.PRO</div>
+                        <div class="name">OBSERVAÇÃO</div>
+                        <div class="type">TIPO</div>
+                        <div class="amount">QUANT.</div>
+                        <div class="date">DATA</div>
+                        <button class="alterar-off"></button>
+                        <button class="deletar-off"></button>
+                    </div>
+                    <div id="tableMov" class="boxItens">
+                    </div>
+                </div>
+
+            </div>
         </section>
     </section>
 

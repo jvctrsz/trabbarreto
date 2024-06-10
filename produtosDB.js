@@ -1,8 +1,3 @@
-const tempClient = {
-    nome: 'controle gamer',
-    tipo: 'eletronico',
-    quantidade: '1'
-}
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_produto')) ?? []
 const setLocalStorage = (dbProduto) => localStorage.setItem('db_produto', JSON.stringify(dbProduto))

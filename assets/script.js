@@ -55,5 +55,6 @@ function fecharProd(){
 
 function fecharMov(){
     incluirmov.classList.remove('incluirAct')
+    limparInput()
 }
 
