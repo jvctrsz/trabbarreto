@@ -17,6 +17,7 @@ function activeCheck() {
 
 function produtos(){
     activeCheck()
+    atualizarTable()
     backProd.classList.add("active")
 }
 
