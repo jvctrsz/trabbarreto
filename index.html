@@ -17,12 +17,14 @@
                         <img src="./assets/images/estoque-logo.png" alt="">
                     </div>
                     <div class="form-box">
-                        <input type="text" id="login" name="login" placeholder="Usuario:">
-                        <input type="text" id="password" name="password" placeholder="Senha:">
+                        <input type="text" id="loginUser" name="login" placeholder="Usuario:">
+                        <input type="password"  id="senhaUser" name="password" placeholder="Senha:">
                     </div>
+                    <p id="loginMensage"></p>
+                    <button class="login-btn" onclick="login()">LOGIN</button>
                 </div>
             </div>
-            <button class="login-btn" onclick="login()">LOGIN</button>
+            
         </section>
     </section>
 
@@ -118,15 +120,15 @@
                             <form id="formMovi" class="inputs-incluir">
                                 <div class="input-box">
                                     <label for="nome">NOME</label>
-                                    <input id="nomeProd" class="inputsProd" type="text" name="nome" required>
+                                    <input id="nomeMov" class="inputsProd" type="text" name="nome" required>
                                 </div>
                                 <div class="input-box">
                                     <label for="amount">QUANTIDADE</label>
-                                    <input id="quantProd" class="inputsProd" type="text" name="type" required>
+                                    <input id="quantMov" class="inputsProd" type="text" name="type" required>
                                 </div>
                                 <div class="input-box">
                                     <label for="type">TIPO</label>
-                                    <input id="tipoProd" class="inputsProd" type="text" name="type" required>
+                                    <input id="tipoMov" class="inputsProd" type="text" name="type" required>
                                 </div>
                             </form>
                             <div class="incluir-options">
@@ -156,8 +158,8 @@
                                     <div class="type">entrada</div>
                                     <div class="amount">5.</div>
                                     <div class="date">07/11/2023</div>
-                                 <button class="alterar">Editar</button>
                                  <button class="deletar">Deletar</button>
+                                 <button class="alterar-off"></button>
                                </div>
                             </div>
                         </div>

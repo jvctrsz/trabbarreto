@@ -58,8 +58,6 @@ const salvarProduto = () => {
 
 }
 
-let index = lerProduto()
-
 const limparTable = () => {
     const linhas = document.querySelectorAll('#tableProd > div')
     linhas.forEach(linha => linha.parentNode.removeChild(linha))
