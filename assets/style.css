@@ -161,7 +161,21 @@
     background-color: rgb(235, 235, 235);
 }
 
-.title-line, .product-line{
+.boxItens{
+    display: flex;
+    flex-direction: column;
+}
+
+.boxItens > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.boxItens > div > div{
+        display: flex;
+    }
+    
+.title-line{
     display: flex;
 }
 
