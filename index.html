@@ -50,8 +50,6 @@
                 <div class="options-menu">
                     <nav class="edit-products">
                         <button class="edit-btn" onclick="incluirProd()">Incluir</button>
-                        <button class="edit-btn">Alterar</button>
-                        <button class="edit-btn">Excluir</button>
                     </nav>
                     <nav class="search">
                         <input type="text" placeholder="PESQUISA" name="search">
@@ -84,17 +82,20 @@
                     </div>
                 </section>
 
-                <div  class="table">
+                <div class="table">
                     <div class="title-line">
                         <div class="code">CÓDIGO</div>
                         <div class="name">NOME</div>
                         <div class="type">TIPO</div>
                         <div class="amount">QUANT.</div>
+                        <button class="alterar-off"></button>
+                        <button class="deletar-off"></button>
                     </div>
                     <div id="tableProd" class="boxItens">
                     </div>
                 </div>
-
+            </div>
+            
                 <div class="background-movimentacao">
                     <div class="title-produtos">
                         <span>MOVIMENTAÇÃO</span>
@@ -109,25 +110,25 @@
                         </nav>
                     </div>
 
-                    <section id="incluirMov" class="incluir-display ">
+                    <section id="incluirMov" class="incluir-display">
                         <div class="incluir">
                             <div class="incluir-produtos">
                                 <span>MOVIMENTAÇÃO</span>
                             </div>
-                            <div class="inputs-incluir">
+                            <form id="formMovi" class="inputs-incluir">
                                 <div class="input-box">
                                     <label for="nome">NOME</label>
-                                    <input type="text" name="nome">
+                                    <input id="nomeProd" class="inputsProd" type="text" name="nome" required>
                                 </div>
                                 <div class="input-box">
                                     <label for="amount">QUANTIDADE</label>
-                                    <input type="text" name="amount">
+                                    <input id="quantProd" class="inputsProd" type="text" name="type" required>
                                 </div>
                                 <div class="input-box">
                                     <label for="type">TIPO</label>
-                                    <input type="text" name="type">
+                                    <input id="tipoProd" class="inputsProd" type="text" name="type" required>
                                 </div>
-                            </div>
+                            </form>
                             <div class="incluir-options">
                                 <button id="fechar-mov" class="fechar -btn" onclick="fecharMov()">CANCELAR</button>
                                 <button id="enviar-mov" class="enviar -btn">ENVIAR</button>
@@ -143,16 +144,25 @@
                             <div class="type">TIPO</div>
                             <div class="amount">QUANT.</div>
                             <div class="date">DATA</div>
+                            <button class="alterar-off"></button>
+                            <button class="deletar-off"></button>
                         </div>
-                        <div class="product-line">
-                            <div class="code">1</div>
-                            <div class="code">2</div>
-                            <div class="name">TECLADO GAMER REDRAGON</div>
-                            <div class="type">ENTRADA</div>
-                            <div class="amount">3</div>
-                            <div class="code">03/06/2024</div>
+                        <div id="tableMov" class="boxItens">
+                            <div>
+                                <div>
+                                    <div class="code">0</div>
+                                    <div class="code">0</div>
+                                    <div class="name">teclado</div>
+                                    <div class="type">entrada</div>
+                                    <div class="amount">5.</div>
+                                    <div class="date">07/11/2023</div>
+                                 <button class="alterar">Editar</button>
+                                 <button class="deletar">Deletar</button>
+                               </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
         </section>
     </section>

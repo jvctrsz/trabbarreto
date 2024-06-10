@@ -74,6 +74,8 @@ const criarLinha = (produto) => {
        <div class="name">${produto.nome}</div>
        <div class="type">${produto.tipo}</div>
       <div class="amount">${produto.quantidade}</div>
+      <button class="alterar">Editar</button>
+      <button class="deletar">Deletar</button>
     </div>`
 
     document.querySelector('#tableProd').appendChild(novaLinha)
