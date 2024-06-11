@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #4da8cf;
 }
 
 .login {
@@ -24,6 +25,10 @@
     align-items: center;
     border: 2px solid #000000af;
     box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.185);
+}
+
+.login-container{
+    background-color: #fff;
 }
 
 .image-login{
@@ -46,13 +51,14 @@
     width: 100px;
     padding: 10px;
     margin: 20px;
+    background-color: #4da8cf;
     border-radius: 5px;
     border: none;
     cursor: pointer;
 }
 
 .login-btn:hover{
-    background-color: #0000004b;
+    background-color: #00b3ff;
 }
 
 /* HOME PAGE */
@@ -68,7 +74,7 @@
 .lateral-bar{
     min-width: 300px;
     border-right: 1px solid black;
-    background-color: #fff;
+    background-color: #4da8cf;
 }
 
 .lateral-bar > nav > ul{
@@ -85,7 +91,7 @@
 
 .lateral-bar > nav > ul > li:hover{
     cursor: pointer;
-    background-color: #9494942c;
+    background-color: #00b3ff;
     border-radius: 10px;
 }
 
@@ -110,6 +116,7 @@
 .background-produtos{
     width: 100vw;
     padding-left: 30px;
+    background-color: #c3e3fd;
     display: none;
 }
 
@@ -131,15 +138,15 @@
     margin-left:10px;
     padding: 5px 25px;
     border: none;
-    background-color: rgb(235, 235, 235);
-    box-shadow: 0px 5px 5px #00000044;
+    background-color: #4da8cf;
+    box-shadow: 5px 5px 5px #00000044;
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
 }
 
 .edit-btn:hover{
-    background-color: #8888884b;
+    background-color: #00b3ff;
 }
 
 .search{
@@ -240,6 +247,7 @@
     width: 100vw;
     padding-left: 30px;
     display: none;
+    background-color: #c3e3fd;
 }
 
 .date{
