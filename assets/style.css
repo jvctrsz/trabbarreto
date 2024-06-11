@@ -274,7 +274,6 @@
 .incluir-display{
     display: none;
     position: absolute;
- 
     border: 1px solid #000;
 }
 
@@ -282,8 +281,12 @@
 .incluir{
     width: 300px;
     height: 250px;
-    background-color: #fff;
-    
+    background-color: #c3e3fd;   
+}
+
+.incluir-produtos > span{
+    font-weight: bold;
+    padding: 10px;
 }
 
 .inputs-incluir{
@@ -298,9 +301,17 @@
     flex-direction: column;
 }
 
+.incluir-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .-btn{
-    margin-left: 20px;
-    padding: 10px 20px;
+    width: 100px;
+    margin: 10px;
+    padding: 8px 0px;
+    background-color: #4da8cf;
     text-align: center;
     border: none;
     border-radius: 10px;
@@ -308,7 +319,7 @@
 }
 
 .-btn:hover{
-    background-color: rgb(197, 197, 197);
+    background-color: #00b3ff;
 }
 
 .incluirAct{
