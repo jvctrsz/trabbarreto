@@ -173,15 +173,14 @@
     flex-direction: column;
 }
 
-.boxItens > div{
-    display: flex;
-    flex-direction: column;
-}
-
-.boxItens > div > div{
+.boxItens > div {
         display: flex;
     }
-    
+   
+.boxItens div:hover{
+    background-color: rgba(8, 192, 238, 0.493)
+    }
+
 .title-line{
     display: flex;
 }

@@ -39,16 +39,23 @@ const limparInput = () => {
 
 const salvarProduto = () => {
     if (notNull()) {
-        console.log('cadastrando')
         const produto = {
             nome: document.querySelector('#nomeProd').value,
             tipo: document.querySelector('#tipoProd').value,
             quantidade: document.querySelector('#quantProd').value
         }
-        criarProduto(produto)
-        limparInput()
-        atualizarTable()
-        fecharProd()
+        const index = document.getElementById('nomeProd').dataset.index
+        if(index == 'new'){
+            criarProduto(produto)
+            limparInput()
+            atualizarTable()
+            fecharProd()
+        }else{
+            alterarProduto(index,produto)
+            atualizarTable()
+            fecharProd()
+        }
+       
     }
 
 }
@@ -56,20 +63,18 @@ const salvarProduto = () => {
 const limparTable = () => {
     const linhas = document.querySelectorAll('#tableProd > div')
     linhas.forEach(linha => linha.parentNode.removeChild(linha))
-    console.log(linhas)
 }
 
-const criarLinha = (produto) => {
+const criarLinha = (produto, index) => {
     const novaLinha = document.createElement('div')
     novaLinha.innerHTML = `
-     <div>
-       <div class="code">0</div>
+       <div class="code">${index + 1}</div>
        <div class="name">${produto.nome}</div>
        <div class="type">${produto.tipo}</div>
       <div class="amount">${produto.quantidade}</div>
-      <button class="alterar">Editar</button>
-      <button class="deletar">Deletar</button>
-    </div>`
+      <button class="alterar" id="editar-${index}">Editar</button>
+      <button class="deletar" id="deletar-${index}"deletar">Deletar</button>
+`
 
     document.querySelector('#tableProd').appendChild(novaLinha)
 }
@@ -82,7 +87,41 @@ atualizarTable = () => {
     dbProduto.forEach(criarLinha)
 }
 
+const preencherCampos = (produto) =>{
+    document.querySelector('#nomeProd').value = produto.nome
+    document.querySelector('#tipoProd').value = produto.tipo
+    document.querySelector('#quantProd').value = produto.quantidade
+    document.querySelector('#nomeProd').dataset.index = produto.index
+}
+
+const editarProduto = (index) =>{
+    const produto = lerProduto()[index]
+    produto.index = index
+    preencherCampos(produto)
+    incluirProd()
+}
+
+const editarDeletar =(event) => {
+    if(event.target.type == 'submit') {
+        const [action,index] = event.target.id.split('-')
+       if(action == 'editar') {
+        editarProduto(index)
+       } else{
+        const produto = lerProduto()[index]
+        const pergunta = confirm(`Você realmente quer deletar o produto (${produto.nome})`)
+        if(pergunta){
+            deletarProduto(index)
+            atualizarTable()
+        }
+       }
+    }
+    
+}
+
+
 atualizarTable()
 
 
 document.getElementById('enviar-prod').addEventListener('click', salvarProduto)
+
+document.querySelector('.boxItens').addEventListener('click',editarDeletar)
