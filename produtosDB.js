@@ -118,6 +118,13 @@ const editarDeletar =(event) => {
     
 }
 
+const pesquisarProduto = () =>{
+    const search = document.querySelector('#searchProduto').value
+    console.log(search)
+    const produto = lerProduto()
+    produto.forEach(linha => console.log(linha))
+    // if(search == )
+}
 
 atualizarTable()
 
@@ -125,3 +132,5 @@ atualizarTable()
 document.getElementById('enviar-prod').addEventListener('click', salvarProduto)
 
 document.querySelector('.boxItens').addEventListener('click',editarDeletar)
+
+document.querySelector('#searchBtn').addEventListener('click', pesquisarProduto)

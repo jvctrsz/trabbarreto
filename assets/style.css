@@ -158,6 +158,19 @@
     text-align: center;
 }
 
+.searchBtn{
+    padding: 6px 10px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background-color: #4da8cf;
+    box-shadow: 5px 5px 5px #00000044;
+}
+
+.searchBtn:hover{
+    background-color: #00b3ff;
+}
+
 .table{
     width: 95%;
     height: 80%;
@@ -256,18 +269,7 @@
 }
 
 
-
-.section-display{
-    display: none;
-}
-
-
-.activeHome{
-    display: block;
-}
-.active{
-    display: block;
-}
+/*INCLUIR PRODUTOS*/
 
 
 .incluir-display{
@@ -321,6 +323,100 @@
     background-color: #00b3ff;
 }
 
+
+/* RELATORIOS */
+
+.background-relatorio{  
+    display: none;
+}
+
+.relatorio{
+    width: 70vw;
+    height: 100vh;
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relatorio-title{
+    align-self: center;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.relatorio-box{
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #000;
+    background-color: #c3e3fd; 
+}
+
+.relatorio-menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-top: 1px solid #000;
+}
+
+.left-box{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #000;
+}
+
+.tipo-btn{
+    margin: 15px 20px;
+    width: 150px;
+    padding: 10px;
+    box-shadow: 0px 5px 5px #00000038;
+    border: none;
+    background-color: #4da8cf;
+    cursor: pointer;
+}
+
+.right-box{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options-btn{
+    margin: 5px 20px;
+    width: 80%;
+    padding: 10px;
+    box-shadow: 0px 5px 5px #00000038;
+    border: none;
+    background-color: #4da8cf;
+    cursor: pointer;
+}
+
+.tipo-btn:hover, .options-btn:hover{
+    background-color: #00b3ff;
+}
+
+/* DISPLAY CONTROLLER */
+
+
 .incluirAct{
+    display: block;
+}
+
+
+.section-display{
+    display: none;
+}
+
+
+.activeHome{
+    display: block;
+}
+.active{
     display: block;
 }

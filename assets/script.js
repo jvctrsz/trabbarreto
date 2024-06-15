@@ -7,6 +7,7 @@ let incluirprod = document.querySelector('#incluirProd')
 let incluirmov = document.querySelector('#incluirMov')
 let fecharprod = document.querySelector('#fechar-prod')
 let fecharmov = document.querySelector('#fechar-mov')
+let backRel = document.querySelector('.background-relatorio')
 
 function activeCheck() {
     let activeElement = document.querySelector('.active');
@@ -22,8 +23,13 @@ function produtos(){
 }
 
 function movimentacao(){
-    backMovi.classList.add('active')
     activeCheck()
+    backMovi.classList.add('active')
+}
+
+function relatorio(){
+    activeCheck()
+    backRel.classList.add('active')
 }
 
 function login(){

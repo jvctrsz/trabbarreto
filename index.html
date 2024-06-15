@@ -36,7 +36,7 @@
                     <ul>
                         <li class="btn-nav" onclick="produtos()">produtos</li>
                         <li class="btn-nav" onclick="movimentacao()">movimentação</li>
-                        <li class="btn-nav">relatório</li>
+                        <li class="btn-nav" onclick="relatorio()">relatório</li>
                     </ul>
                 </nav>
             </div>
@@ -55,7 +55,8 @@
                         <button class="edit-btn" onclick="incluirProd()">Incluir</button>
                     </nav>
                     <nav class="search">
-                        <input type="text" placeholder="PESQUISA" name="search">
+                        <input id="searchProduto" type="text" placeholder="PESQUISA" name="search">
+                        <button id="searchBtn" class="searchBtn">enviar</button>
                     </nav>
                 </div>
 
@@ -67,15 +68,18 @@
                         <form id="formProdutos" class="inputs-incluir">
                             <div class="input-box">
                                 <label for="nome">NOME</label>
-                                <input id="nomeProd" data-index="new" class="inputsProd" type="text" data-index="new" name="nome" placeholder="Nome do produto" required>
+                                <input id="nomeProd" data-index="new" class="inputsProd" type="text" data-index="new"
+                                    name="nome" placeholder="Nome do produto" required>
                             </div>
                             <div class="input-box">
                                 <label for="type">TIPO</label>
-                                <input id="tipoProd" class="inputsProd" type="text" name="type"  placeholder="Tipo do produto" required>
+                                <input id="tipoProd" class="inputsProd" type="text" name="type"
+                                    placeholder="Tipo do produto" required>
                             </div>
                             <div class="input-box">
                                 <label for="amount">QUANTIDADE</label>
-                                <input id="quantProd" class="inputsProd" type="text" name="type"  placeholder="Quantidade de produtos" required>
+                                <input id="quantProd" class="inputsProd" type="text" name="type"
+                                    placeholder="Quantidade de produtos" required>
                             </div>
                         </form>
                         <div class="incluir-options">
@@ -158,6 +162,29 @@
                 </div>
 
             </div>
+
+            <section class="background-relatorio">
+                
+                <div class="relatorio">
+                    <div class="relatorio-box">
+                        <div class="relatorio-title">
+                            <span>RELATÓRIO</span>
+                        </div>
+                        <section class="relatorio-menu">
+                            <div class="left-box">
+                                <button class="tipo-btn">PRODUTO</button>
+                                <button class="tipo-btn">TIPO</button>
+                                <button class="tipo-btn">DATA</button>
+                            </div>
+                            <div class="right-box">
+                                <button class="options-btn">PDF</button>
+                                <button class="options-btn">IMPRIMIR</button>
+                                <button class="options-btn">SAIR</button>
+                            <div>
+                        </section>
+                    </div>
+                </div>
+            </section>
         </section>
     </section>
 
