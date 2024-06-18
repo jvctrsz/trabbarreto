@@ -24,6 +24,7 @@ function produtos(){
 
 function movimentacao(){
     activeCheck()
+    atualizarTabela()
     backMovi.classList.add('active')
 }
 
@@ -61,6 +62,6 @@ function fecharProd(){
 
 function fecharMov(){
     incluirmov.classList.remove('incluirAct')
-    limparInput()
+    limparInputMovi()
 }
 

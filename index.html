@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/style.css">
+    <!-- ICON -->
     <link rel="shortcut icon" href="./assets/images/estoque-logo.png" type="image/x-icon">
     <title>Controle de estoque</title>
 </head>
 
 <body>
+    <!-- PAGINA DE LOGIN -->
     <section id="loginD" class="section-display active">
         <section class="login-page">
             <div class="login-container">
@@ -25,11 +28,12 @@
                     <button class="login-btn" onclick="login()">LOGIN</button>
                 </div>
             </div>
-
         </section>
     </section>
 
-    <section id="homePage" class="section-display">
+    <!-- CORPO DO SITE -->
+    <section id="homePage" class="section-display">  
+        <!-- BARRA LATERAL -->
         <section class="home-page">
             <div class="lateral-bar">
                 <nav>
@@ -40,12 +44,15 @@
                     </ul>
                 </nav>
             </div>
+
+            <!-- BACKGROUND INICIAL -->
             <section id="background" class="section-display">
                 <div class="background ">
                     <p>CONTROLE <br>DE <br>ESTOQUE</p>
                 </div>
             </section>
 
+            <!-- BACKGROUND DE PRODUTOS -->
             <div class="background-produtos">
                 <div class="title-produtos">
                     <span>PRODUTOS</span>
@@ -60,6 +67,7 @@
                     </nav>
                 </div>
 
+                <!-- INCLUIR PRODUTOS -->
                 <section id="incluirProd" class="incluir-display">
                     <div class="incluir">
                         <div class="incluir-produtos">
@@ -68,18 +76,15 @@
                         <form id="formProdutos" class="inputs-incluir">
                             <div class="input-box">
                                 <label for="nome">NOME</label>
-                                <input id="nomeProd" data-index="new" class="inputsProd" type="text" data-index="new"
-                                    name="nome" placeholder="Nome do produto" required>
+                                <input id="nomeProd" data-index="new" class="inputsProd" type="text" data-index="new" placeholder="Nome do produto" >
                             </div>
                             <div class="input-box">
                                 <label for="type">TIPO</label>
-                                <input id="tipoProd" class="inputsProd" type="text" name="type"
-                                    placeholder="Tipo do produto" required>
+                                <input id="tipoProd" class="inputsProd" type="text" placeholder="Tipo do produto" >
                             </div>
                             <div class="input-box">
                                 <label for="amount">QUANTIDADE</label>
-                                <input id="quantProd" class="inputsProd" type="text" name="type"
-                                    placeholder="Quantidade de produtos" required>
+                                <input id="quantProd" class="inputsProd" placeholder="Quantidade de produtos" >
                             </div>
                         </form>
                         <div class="incluir-options">
@@ -88,7 +93,8 @@
                         </div>
                     </div>
                 </section>
-
+                
+                <!-- TABELA DE PRODUTOS -->
                 <div class="table">
                     <div class="title-line">
                         <div class="code">CÓDIGO</div>
@@ -103,6 +109,7 @@
                 </div>
             </div>
 
+            <!-- BACKGROUND DE MOVIMENTAÇÃO -->
             <div class="background-movimentacao">
                 <div class="title-produtos">
                     <span>MOVIMENTAÇÃO</span>
@@ -116,6 +123,7 @@
                     </nav>
                 </div>
 
+                <!-- INCLUIR MOVIMENTAÇÃO -->
                 <section id="incluirMov" class="incluir-display">
                     <div class="incluir">
                         <div class="incluir-produtos">
@@ -124,28 +132,29 @@
                         <form id="formMovi" class="inputs-incluir">
                             <div class="input-box">
                                 <label for="nome">COD.PRO</label>
-                                <input id="codMov" class="inputsMov" type="text" name="nome" required>
+                                <input id="codMov" class="inputsMov" type="text" >
                             </div>
                             <div class="input-box">
                                 <label for="nome">NOME</label>
-                                <input id="nomeMov" class="inputsMov" type="text" name="nome" required>
+                                <input id="nomeMov" class="inputsMov" type="text" >
                             </div>
                             <div class="input-box">
                                 <label for="type">TIPO</label>
-                                <input id="tipoMov" class="inputsMov" type="text" name="type" required>
+                                <input id="tipoMov" class="inputsMov" type="text" >
                             </div>
                             <div class="input-box">
                                 <label for="amount">QUANTIDADE</label>
-                                <input id="quantMov" class="inputsMov" type="text" name="type" required>
+                                <input id="quantMov" class="inputsMov" type="text" >
                             </div>
                         </form>
                         <div class="incluir-options">
-                            <button id="fechar-mov" class="fechar -btn" onclick="fecharMov()">CANCELAR</button>
+                            <button id="fechar-mov" class="fechar -btn" onclick="fecharMov()" >CANCELAR</button>
                             <button id="enviar-mov" class="enviar -btn">ENVIAR</button>
                         </div>
                     </div>
                 </section>
 
+                <!-- TABELA DE MOVIMENTAÇÃO -->
                 <div class="table">
                     <div class="title-line">
                         <div class="code">CÓDIGO</div>
@@ -163,8 +172,8 @@
 
             </div>
 
-            <section class="background-relatorio">
-                
+            <!-- BACKGROUND DO RELATORIO -->
+            <section class="background-relatorio">    
                 <div class="relatorio">
                     <div class="relatorio-box">
                         <div class="relatorio-title">
@@ -188,9 +197,10 @@
         </section>
     </section>
 
-
+    <!-- JAVASCRIPT -->
     <script src="./assets/script.js"></script>
     <script src="./produtosDB.js"></script>
+    <script src="./moviDB.js"></script>
 </body>
 
 </html>
