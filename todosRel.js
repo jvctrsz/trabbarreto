@@ -4,10 +4,9 @@ const salvarRelTodos = () =>{
 
 const atualizarTableTodos = () => {
     const dbProduto = lerProduto()
-    limparTable()
+    limparTableRel()
     dbProduto.forEach(criarRelProd)
     const dbMovimento = lerMovimento()
-    limparTabela()
     dbMovimento.forEach(criarRelMov)
 }
 
