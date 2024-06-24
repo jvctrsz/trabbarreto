@@ -8,6 +8,9 @@ let incluirmov = document.querySelector('#incluirMov')
 let fecharprod = document.querySelector('#fechar-prod')
 let fecharmov = document.querySelector('#fechar-mov')
 let backRel = document.querySelector('.background-relatorio')
+let relatorioBox = document.querySelector('.relatorio')
+let tabelaRel = document.querySelector('.tabelaRelBackground')
+let prodBtn = document.querySelector('#prodBtn')
 
 function activeCheck() {
     let activeElement = document.querySelector('.active');
@@ -31,6 +34,22 @@ function movimentacao(){
 function relatorio(){
     activeCheck()
     backRel.classList.add('active')
+    relatorioBox.classList.remove('desactive')
+}
+
+function produtosRel() {
+    relatorioBox.classList.add('desactive')
+    tabelaRel.classList.add('active')
+}
+
+function movimentoRel(){
+    relatorioBox.classList.add('desactive')
+    tabelaRel.classList.add('active')
+}
+
+function todosRel(){
+    relatorioBox.classList.add('desactive')
+    tabelaRel.classList.add('active')
 }
 
 function login(){

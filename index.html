@@ -61,10 +61,6 @@
                     <nav class="edit-products">
                         <button class="edit-btn" onclick="incluirProd()">Incluir</button>
                     </nav>
-                    <nav class="search">
-                        <input id="searchProduto" type="text" placeholder="PESQUISA" name="search">
-                        <button id="searchBtn" class="searchBtn">enviar</button>
-                    </nav>
                 </div>
 
                 <!-- INCLUIR PRODUTOS -->
@@ -76,15 +72,15 @@
                         <form id="formProdutos" class="inputs-incluir">
                             <div class="input-box">
                                 <label for="nome">NOME</label>
-                                <input id="nomeProd" data-index="new" class="inputsProd" type="text" data-index="new" placeholder="Nome do produto" >
+                                <input id="nomeProd" data-index="new" class="inputsProd" type="text" data-index="new" placeholder="Nome do produto" required>
                             </div>
                             <div class="input-box">
                                 <label for="type">TIPO</label>
-                                <input id="tipoProd" class="inputsProd" type="text" placeholder="Tipo do produto" >
+                                <input id="tipoProd" class="inputsProd" type="text" placeholder="Tipo do produto" required>
                             </div>
                             <div class="input-box">
                                 <label for="amount">QUANTIDADE</label>
-                                <input id="quantProd" class="inputsProd" placeholder="Quantidade de produtos" >
+                                <input id="quantProd" class="inputsProd" placeholder="Quantidade de produtos" required>
                             </div>
                         </form>
                         <div class="incluir-options">
@@ -118,9 +114,6 @@
                     <nav class="edit-products">
                         <button class="edit-btn" onclick="incluirMov()">Incluir</button>
                     </nav>
-                    <nav class="search">
-                        <input type="text" placeholder="PESQUISA" name="search">
-                    </nav>
                 </div>
 
                 <!-- INCLUIR MOVIMENTAÇÃO -->
@@ -136,7 +129,8 @@
                             </div>
                             <div class="input-box">
                                 <label for="nome">NOME</label>
-                                <input id="nomeMov" class="inputsMov" type="text" >
+                                <input id="nomeMov" data-index="new"
+                                class="inputsMov" type="text" >
                             </div>
                             <div class="input-box">
                                 <label for="type">TIPO</label>
@@ -177,20 +171,19 @@
                 <div class="relatorio">
                     <div class="relatorio-box">
                         <div class="relatorio-title">
-                            <span>RELATÓRIO</span>
+                            <span>RELATÓRIOS</span>
                         </div>
                         <section class="relatorio-menu">
                             <div class="left-box">
-                                <button class="tipo-btn">PRODUTO</button>
-                                <button class="tipo-btn">TIPO</button>
-                                <button class="tipo-btn">DATA</button>
+                                <button id="prodBtn" class="tipoBtn" onclick="produtosRel()">PRODUTOs</button>
+                                <button id="movBtn" class="tipoBtn" onclick="movimentoRel()">MOVIMENTAÇÃO</button>
+                                <button id="todosBtn" class="tipoBtn" onclick="todosRel()">TODOS</button>
                             </div>
-                            <div class="right-box">
-                                <button class="options-btn">PDF</button>
-                                <button class="options-btn">IMPRIMIR</button>
-                                <button class="options-btn">SAIR</button>
-                            <div>
                         </section>
+                    </div>
+                </div>
+                <div class="tabelaRelBackground">
+                    <div id="tabelaRel" class="tabelaRelatorio">
                     </div>
                 </div>
             </section>
@@ -201,6 +194,7 @@
     <script src="./assets/script.js"></script>
     <script src="./produtosDB.js"></script>
     <script src="./moviDB.js"></script>
+    <script src="./todosRel.js"></script>
 </body>
 
 </html>

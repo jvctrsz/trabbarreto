@@ -60,8 +60,19 @@ const salvarProduto = () => {
 
 }
 
+
+const salvarRelProd = () =>{
+    limparTableRel()
+    atualizarTableRel()
+}
+
 const limparTable = () => {
     const linhas = document.querySelectorAll('#tableProd > div')
+    linhas.forEach(linha => linha.parentNode.removeChild(linha))
+}
+
+const limparTableRel = () => {
+    const linhas = document.querySelectorAll('#tabelaRel > div')
     linhas.forEach(linha => linha.parentNode.removeChild(linha))
 }
 
@@ -75,17 +86,35 @@ const criarLinha = (produto, index) => {
       <button class="alterar" id="editar-${index}">Editar</button>
       <button class="deletar" id="deletar-${index}"deletar">Deletar</button>
 `
-
     document.querySelector('#tableProd').appendChild(novaLinha)
 }
 
 
+
+const criarRelProd = (produto, index) =>{
+    const novaLinha = document.createElement('div')
+    novaLinha.innerHTML = `
+       <div class="code">${index + 1}</div>
+       <div class="name">${produto.nome}</div>
+       <div class="type">${produto.tipo}</div>
+      <div class="amount">${produto.quantidade}</div>
+`
+    
+    document.querySelector('#tabelaRel').appendChild(novaLinha)
+}
 
 atualizarTable = () => {
     const dbProduto = lerProduto()
     limparTable()
     dbProduto.forEach(criarLinha)
 }
+
+atualizarTableRel = () => {
+    const dbProduto = lerProduto()
+    limparTableRel()
+    dbProduto.forEach(criarRelProd)
+}
+
 
 const preencherCampos = (produto) =>{
     document.querySelector('#nomeProd').value = produto.nome
@@ -118,9 +147,8 @@ const editarDeletar =(event) => {
     
 }
 
-atualizarTable()
-
-
 document.getElementById('enviar-prod').addEventListener('click', salvarProduto)
 
 document.querySelector('#tableProd').addEventListener('click',editarDeletar)
+
+document.querySelector('#prodBtn').addEventListener('click',salvarRelProd)

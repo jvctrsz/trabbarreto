@@ -149,28 +149,6 @@
     background-color: #00b3ff;
 }
 
-.search{
-    margin-left: 30px;
-}
-
-.search > input{
-    padding: 5px 40px;
-    text-align: center;
-}
-
-.searchBtn{
-    padding: 6px 10px;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    background-color: #4da8cf;
-    box-shadow: 5px 5px 5px #00000044;
-}
-
-.searchBtn:hover{
-    background-color: #00b3ff;
-}
-
 .table{
     width: 95%;
     height: 80%;
@@ -262,9 +240,13 @@
     background-color: #c3e3fd;
 }
 
+.background-movimentacao > .table > .title-line > .name ,#tableMov > div > .name {
+    width: 30%;
+}
+
 .date{
     border: 1px solid black;
-    width: 10%;
+    width: 20%;
     text-align: center;
 }
 
@@ -333,7 +315,6 @@
 .relatorio{
     width: 70vw;
     height: 100vh;
-    padding-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,7 +328,7 @@
 }
 
 .relatorio-box{
-    width: 600px;
+    width: 95%;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -364,15 +345,16 @@
 }
 
 .left-box{
-    width: 70%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    border-right: 1px solid #000;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.tipo-btn{
+.tipoBtn{
     margin: 15px 20px;
     width: 150px;
+    height: 40px;
     padding: 10px;
     box-shadow: 0px 5px 5px #00000038;
     border: none;
@@ -380,27 +362,33 @@
     cursor: pointer;
 }
 
-.right-box{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.options-btn{
-    margin: 5px 20px;
-    width: 80%;
-    padding: 10px;
-    box-shadow: 0px 5px 5px #00000038;
-    border: none;
-    background-color: #4da8cf;
-    cursor: pointer;
-}
-
-.tipo-btn:hover, .options-btn:hover{
+.tipoBtn:hover{
     background-color: #00b3ff;
 }
 
+.tabelaRelBackground{
+    width: 70vw;
+    height: 90vh;
+    margin-left: 30px;
+}
+
+.tabelaRelatorio{
+    width: 95%;
+    height: 80%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    background-color: rgb(235, 235, 235);
+}
+
+.tabelaRelatorio > div {
+    display: flex;
+}
+
+.tabelaRelatorio > div > .name {
+    width: 60%;
+}
 /* DISPLAY CONTROLLER */
 
 
@@ -413,10 +401,17 @@
     display: none;
 }
 
+.tabelaRelBackground{
+    display: none;
+}
 
 .activeHome{
     display: block;
 }
 .active{
     display: block;
+}
+
+.desactive{
+    display: none;
 }
